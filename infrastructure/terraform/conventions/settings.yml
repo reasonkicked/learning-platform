@@ -1,0 +1,143 @@
+locations:
+  us-east-1: use1
+  us-west-2: usw2
+  eu-central-1: euc1
+  eu-west-1: euw1
+  ap-southeast-1: apse1
+  ap-northeast-1: apne1
+  sa-east-1: sae1
+  ca-central-1: cac1
+  eu-north-1: eun1
+  ap-south-1: aps1
+  af-south-1: afs1
+
+defaults:
+  max_length: 63
+  regex: '(^[^a-zA-Z])|[^a-zA-Z0-9-]|([^a-zA-Z0-9]$)'
+  lower: true
+  separator: "-"
+  application_name: true
+
+resources:
+  # A
+  api_gateway:
+    prefix: apigw
+    max_length: 63
+
+  app_load_balancer:
+    prefix: alb
+    max_length: 32
+
+  auto_scaling_group:
+    prefix: asg
+    max_length: 63
+
+  # C
+  cloudfront_distribution:
+    prefix: cf
+    max_length: 32
+
+  cloudwatch_log_group:
+    prefix: cwlg
+    max_length: 512
+
+  codebuild_project:
+    prefix: cb
+    max_length: 63
+
+  codepipeline:
+    prefix: cp
+    max_length: 100
+
+  # D
+  dynamodb_table:
+    prefix: ddb
+    max_length: 255
+
+  # E
+  ec2_instance:
+    prefix: ec2
+    max_length: 63
+
+  ebs_volume:
+    prefix: ebs
+    max_length: 255
+
+  ecs_cluster:
+    prefix: ecs
+    max_length: 255
+
+  ecr_repository:
+    prefix: ecr
+    max_length: 256
+
+  elastic_load_balancer:
+    prefix: elb
+    max_length: 32
+
+  # I
+  iam_role:
+    prefix: iamr
+    max_length: 64
+
+  iam_policy:
+    prefix: iamp
+    max_length: 128
+
+  internet_gateway:
+    prefix: igw
+    max_length: 32
+
+  # L
+  lambda_function:
+    prefix: lmb
+    max_length: 64
+
+  launch_template:
+    prefix: lt
+    max_length: 255
+
+  # R
+  rds_instance:
+    prefix: rds
+    max_length: 63
+
+  route53_zone:
+    prefix: r53z
+    max_length: 128
+
+  redshift_cluster:
+    prefix: red
+    max_length: 63
+
+  # S
+  s3_bucket:
+    prefix: s3
+    max_length: 63
+    separator: ""
+    regex: '[^a-z0-9]'
+
+  security_group:
+    prefix: sg
+    max_length: 255
+
+  sns_topic:
+    prefix: sns
+    max_length: 256
+
+  sqs_queue:
+    prefix: sqs
+    max_length: 80
+
+  subnet:
+    prefix: sn
+    max_length: 32
+
+  # V
+  vpc:
+    prefix: vpc
+    max_length: 32
+
+  vpn_gateway:
+    prefix: vpngw
+    max_length: 32
